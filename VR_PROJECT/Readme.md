@@ -172,9 +172,7 @@ We applied **adaptive binary thresholding** to generate final masks, where:
 ## Evaluation Metric: Intersection Over Union (IoU)  
 We used **IoU (Intersection Over Union)** to measure segmentation accuracy:
 
-\[
-IoU = \frac{\text{Area of Overlap}}{\text{Area of Union}}
-\]
+$$ \text{IoU} = \frac{\text{Area of Overlap}}{\text{Area of Union}} $$
 
 ### **Results**  
 - The **average IoU score** obtained for this dataset was **~0.3**.
@@ -254,9 +252,7 @@ The segmentation model is based on **U-Net**, a popular deep learning architectu
 ### **Evaluation Metric: Intersection Over Union (IoU)**  
 The model is evaluated using the **IoU (Intersection Over Union) score**, which measures segmentation accuracy:
 
-\[
-IoU = \frac{\text{Area of Overlap}}{\text{Area of Union}}
-\]
+$$ \text{IoU} = \frac{\text{Area of Overlap}}{\text{Area of Union}} $$
 
 ---
 
