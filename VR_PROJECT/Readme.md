@@ -9,9 +9,10 @@ The below parts implements a **face mask detection system** using two independen
 ---
 
 ## Requirements  
-To run this project, install the required dependencies:  
+To run this project firstly download the project the download the dataset files from the link given then place the dataset and MSFD folders inside the VR_PROJECT,Then run the python files of all parts, install the required dependencies:  
 ```bash
-pip install opencv-python numpy tensorflow scikit-learn pillow scipy
+pip install opencv-python numpy tensorflow scikit-learn scikit-image pillow scipy torch torchvision torchaudio
+
 ```
 
 ---
@@ -62,25 +63,6 @@ This approach relies on **HOG (Histogram of Oriented Gradients)** features and m
 |----------|---------|  
 | **SVM (HOG Features)** | **87.55%** |  
 | **Neural Network (MLPClassifier)** | **92.06%** |  
-
-### **Classification Report**  
-
-```
-               precision    recall    f1-score    support
-Without Mask     0.98        0.96       0.97        453
-With Mask        0.95        0.98       0.96        366
-
-accuracy                                0.97        819
-macro avg        0.96        0.97       0.97        819
-weighted avg     0.97        0.97       0.97        819
-```
-
-### **Confusion Matrix**  
-
-```
-[[434  19]
- [  9 357]]
-```
 
 ---
 
@@ -284,20 +266,20 @@ IoU = \frac{\text{Area of Overlap}}{\text{Area of Union}}
 **Average Test IoU:** **0.9574**  
 
 ### **IoU Score Progression Per Epoch**  
-Epoch 1 - Train Loss: 0.3751, Train IoU: 0.4879
-Epoch 2 - Train Loss: 0.1330, Train IoU: 0.8767
-Epoch 3 - Train Loss: 0.0927, Train IoU: 0.9093
-Epoch 4 - Train Loss: 0.0769, Train IoU: 0.9242
-Epoch 5 - Train Loss: 0.0690, Train IoU: 0.9335
-Epoch 6 - Train Loss: 0.0637, Train IoU: 0.9408
-Epoch 7 - Train Loss: 0.0601, Train IoU: 0.9462
-Epoch 8 - Train Loss: 0.0575, Train IoU: 0.9504
-Epoch 9 - Train Loss: 0.0560, Train IoU: 0.9530
-Epoch 10 - Train Loss: 0.0551, Train IoU: 0.9545
+- **Epoch 1** - Train Loss: 0.3751, Train IoU: 0.4879
+- **Epoch 2** - Train Loss: 0.1330, Train IoU: 0.8767
+- **Epoch 3** - Train Loss: 0.0927, Train IoU: 0.9093
+- **Epoch 4** - Train Loss: 0.0769, Train IoU: 0.9242
+- **Epoch 5** - Train Loss: 0.0690, Train IoU: 0.9335
+- **Epoch 6** - Train Loss: 0.0637, Train IoU: 0.9408
+- **Epoch 7** - Train Loss: 0.0601, Train IoU: 0.9462
+- **Epoch 8** - Train Loss: 0.0575, Train IoU: 0.9504
+- **Epoch 9** - Train Loss: 0.0560, Train IoU: 0.9530
+- **Epoch 10** - Train Loss: 0.0551, Train IoU: 0.9545
 
 
 ### **Key Findings**  
-- **Unet model** performed better than all other models:  
+- **Unet model** performed better than these other models:  
   - **Unet average test IoU score:** **0.9574**  
   - **Traditional methods average IoU score:** **0.3**  
   - **CNN Final Validation Accuracy:** **94.45%**  
